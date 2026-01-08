@@ -1,0 +1,12 @@
+var SPORT_OPTIONS_HTML = ''
++ '<option value="">Seleziona attività...</option>'
++ '<option value="Calcio">Calcio</option>'
++ '<option value="Basket">Basket</option>'
++ '<option value="Pallavolo">Pallavolo</option>'
++ '<option value="Running">Running</option>'
++ '<option value="Softair">Softair</option>'
++ '<option value="Kickboxing">Kickboxing</option>'
++ '<option value="Ciclismo">Ciclismo</option>'
++ '<option value="Nuoto">Nuoto</option>'
++ '<option value="Arti Marziali">Arti Marziali</option>'
++ '<option value="Altro">Altro... specifica in note</option>';
