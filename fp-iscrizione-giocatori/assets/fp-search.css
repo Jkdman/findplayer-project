@@ -1,0 +1,10 @@
+add_action('wp_enqueue_scripts', function(){
+  wp_enqueue_style('fp-search', plugin_dir_url(__FILE__) . 'assets/fp-search.css', [], '1.0');
+});
+
+/* =========================
+   Scheda Giocatore
+========================= */
+.fp-player-hero {
+  margin-bottom: 32px;
+}

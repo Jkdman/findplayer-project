@@ -1,0 +1,239 @@
+/* ======================================================
+   CHAT FACILE — BASE UI
+   ====================================================== */
+
+/* Header */
+.cf-chat-header {
+    padding: 10px 12px;
+    border-bottom: 1px solid #eee;
+    background: #f7f7f7;
+    border-radius: 8px 8px 0 0;
+}
+
+.cf-chat-title {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Messages area */
+.cf-chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background: #fafafa;
+}
+
+.cf-chat-placeholder,
+.cf-chat-loading,
+.cf-chat-empty {
+    text-align: center;
+    color: #888;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+/* Message bubble */
+.cf-chat-message {
+    max-width: 80%;
+    margin-bottom: 8px;
+    padding: 8px 10px;
+    border-radius: 12px;
+    font-size: 13px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.cf-chat-message.me {
+    background: #d9fdd3;
+    margin-left: auto;
+    border-bottom-right-radius: 4px;
+}
+
+.cf-chat-message.other {
+    background: #ffffff;
+    border: 1px solid #eee;
+    margin-right: auto;
+    border-bottom-left-radius: 4px;
+}
+
+/* Input area */
+.cf-chat-input {
+    display: flex;
+    gap: 6px;
+    padding: 8px;
+    border-top: 1px solid #eee;
+    background: #fff;
+    border-radius: 0 0 8px 8px;
+}
+
+#cf-chat-text {
+    flex: 1;
+    padding: 6px 8px;
+    font-size: 13px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+#cf-chat-text:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+#cf-chat-send {
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 6px;
+    border: none;
+    background: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+#cf-chat-send:hover {
+    background: #43a047;
+}
+
+/* Chat button */
+.cf-chat-open {
+    padding: 6px 10px;
+    font-size: 13px;
+    border-radius: 6px;
+    border: 1px solid #4CAF50;
+    background: #fff;
+    color: #4CAF50;
+    cursor: pointer;
+}
+
+.cf-chat-open:hover {
+    background: #4CAF50;
+    color: #fff;
+}
+/* Online / Offline badge */
+.cf-chat-open.cf-chat-online {
+    border-color: #4CAF50;
+    color: #4CAF50;
+}
+
+.cf-chat-open.cf-chat-online::after {
+    content: '● Online';
+    margin-left: 6px;
+    font-size: 11px;
+    color: #4CAF50;
+}
+
+.cf-chat-open.cf-chat-offline {
+    border-color: #bbb;
+    color: #777;
+}
+
+.cf-chat-open.cf-chat-offline::after {
+    content: '● Offline';
+    margin-left: 6px;
+    font-size: 11px;
+    color: #bbb;
+}
+
+/* Header layout fix */
+.cf-chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+/* Bottone chat globale */
+#cf-chat-global {
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+}
+
+#cf-chat-global.active {
+    background: #4CAF50;
+    color: #fff;
+    border-color: #4CAF50;
+}
+
+.cf-chat-nick {
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+}
+
+.cf-chat-meta {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.cf-chat-date {
+    font-size: 11px;
+    color: #777;
+}
+
+.cf-chat-nick-link {
+    font-size: 12px;
+    font-weight: 600;
+    color: #2a7ae2;
+    text-decoration: none;
+}
+
+.cf-chat-nick-link:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   CHAT FULL PAGE + SCROLL
+========================= */
+
+
+/* area messaggi scrollabile */
+.cf-chat-messages {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    min-height: 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* input sempre visibile */
+.cf-chat-input {
+    flex-shrink: 0;
+}
+
+/* =========================
+   CHAT FACILE — BOX FIXED
+========================= */
+
+/* header fisso */
+.cf-chat-header {
+    flex-shrink: 0;
+}
+
+/* input fisso in basso */
+.cf-chat-input {
+    flex-shrink: 0;
+    border-top: 1px solid #eee;
+}
+/* ============ CHAT FACILE — FIX BOX (FORZA TEMA) ============ */
+/*non basta sostituire questo bisogna cambiare anche quello in chat window*/
+#cf-chat-app.cf-chat-app{
+  height: 600px !important;
+  max-height: 600px !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+#cf-chat-app .cf-chat-messages{
+  flex: 1 1 0 !important;
+  min-height: 0 !important;
+  overflow-y: auto !important;
+}
+
+#cf-chat-app .cf-chat-input{
+  flex: 0 0 auto !important;
+}
