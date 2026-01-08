@@ -1,0 +1,31 @@
+# WordPress
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+wp-content/backup-db/
+
+# Distribution files
+*.zip
+*.tar.gz
+*.rar
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node modules
+node_modules/
+
+# Composer
+/vendor/
+
+# Build artifacts
+/dist/
+/build/

@@ -386,11 +386,13 @@ add_action('phpmailer_init', function ($phpmailer) {
     $phpmailer->Host       = 'smtp.findplayer.it';
     $phpmailer->SMTPAuth   = true;
     $phpmailer->Port       = 587;
-    $phpmailer->Username   = 'noreplay@findplayer.it';
-    $phpmailer->Password   = 'Ancora2025!@';
+    $phpmailer->Username   = 'noreply@findplayer.it';
+    // SECURITY: Password should be stored in wp-config.php or environment variable
+    // Define FINDPLAYER_SMTP_PASSWORD in wp-config.php
+    $phpmailer->Password   = defined('FINDPLAYER_SMTP_PASSWORD') ? FINDPLAYER_SMTP_PASSWORD : '';
     $phpmailer->SMTPSecure = 'tls';
 
-    $phpmailer->From       = 'noreplay@findplayer.it';
+    $phpmailer->From       = 'noreply@findplayer.it';
     $phpmailer->FromName   = 'Find Player';
 });
 
